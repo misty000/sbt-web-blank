@@ -5,4 +5,4 @@ sbt-web-blank
 
 
 启动应用
-<code>container:start</code>
+<pre>container:start</pre>
