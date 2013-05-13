@@ -6,6 +6,11 @@ scalaVersion := "2.10.1"
 
 seq(webSettings :_*)
 
+seq(Revolver.settings: _*)
+
+//export JREBEL_PATH=/JRebel/jrebel.jar
+mainClass in Revolver.reStart := Some("com.example.Main")
+
 libraryDependencies ++= Seq(
 	"org.eclipse.jetty"        %  "jetty-webapp"       % "8.1.10.v20130312"     % "container",
 	"org.eclipse.jetty.orbit"  %  "javax.servlet"      % "3.0.0.v201112011016"  % "container;provided;test" artifacts (Artifact("javax.servlet", "jar", "jar")),
